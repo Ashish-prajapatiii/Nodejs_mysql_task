@@ -85,7 +85,7 @@ const singleBlog = (req, res) => {
   try {
     const { id } = req.params;
 
-    const query = "select * from blog where id = ?";
+    const query = "select * from user_blog where id = ?";
     db.query(query, [id], (err, results) => {
       if (err) {
         return res.send(err);
